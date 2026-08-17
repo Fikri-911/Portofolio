@@ -5,7 +5,7 @@ export default function Navbar({ dark, setDark }) {
   const [open, setOpen] = useState(false);
   const links = [
     ["Home", "home"], ["Achievements", "achievements"],
-    ["Documentation", "documentation"], ["Contact", "contact"]
+    ["Project", "documentation"], ["Contact", "contact"]
   ];
 
   return (

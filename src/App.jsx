@@ -6,6 +6,8 @@ import Achievements from "./components/Achievements";
 import Documentation from "./components/Documentation";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Marquee from "./components/Marquee";
+import Reveal from "./components/Reveal";
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -20,11 +22,22 @@ export default function App() {
   return (
     <div className={dark ? "app dark" : "app light"}>
       <Navbar dark={dark} setDark={setDark} />
+      <Marquee />
       <main>
-        <Hero />
-        <Achievements />
-        <Documentation />
-        <Contact />
+        <Reveal>
+          <Hero />
+        </Reveal>
+        <Reveal>
+          <Achievements />
+        </Reveal>
+
+        <Reveal>
+          <Documentation />
+        </Reveal>
+
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
       {showTop && (

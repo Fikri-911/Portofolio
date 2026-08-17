@@ -59,7 +59,13 @@ export default function Achievements() {
             const Icon = icons[achievement.icon] || Trophy;
 
             return (
-              <article className="achievement" key={index}>
+              <article
+                className="achievement"
+                key={index}
+                style={{
+                  "--delay": `${index * 120}ms`,
+                }}
+              >
                 <div className="year">{achievement.year}</div>
 
                 <div className="timeline-line">
